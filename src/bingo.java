@@ -12,7 +12,7 @@ public class bingo {
             for (int j = 0; j < 5; j++) {
 
                 do {
-                    number = (j*15) + 1 + rand.nextInt(5);
+                    number = (j*15) + 1 + rand.nextInt(15);
 
                 } while (number == bingo[0][0] || number == bingo[0][1] || number == bingo[0][2] || number == bingo[0][3] || number == bingo[0][4] ||
                         number == bingo[1][0] || number == bingo[1][1] || number == bingo[1][2] || number == bingo[1][3] || number == bingo[1][4] ||
