@@ -26,6 +26,7 @@ public class bingo {
         }
     }
 
+
     private static boolean doWeHaveThisNumberAlready(int[][] bingo, int number) {
         return number == bingo[0][0] || number == bingo[0][1] || number == bingo[0][2] || number == bingo[0][3] || number == bingo[0][4] ||
                 number == bingo[1][0] || number == bingo[1][1] || number == bingo[1][2] || number == bingo[1][3] || number == bingo[1][4] ||
@@ -33,4 +34,5 @@ public class bingo {
                 number == bingo[3][0] || number == bingo[3][1] || number == bingo[3][2] || number == bingo[3][3] || number == bingo[3][4] ||
                 number == bingo[4][0] || number == bingo[4][1] || number == bingo[4][2] || number == bingo[4][3] || number == bingo[4][4];
     }
+
 }

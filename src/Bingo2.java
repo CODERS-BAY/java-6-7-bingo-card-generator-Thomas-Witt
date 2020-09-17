@@ -13,13 +13,21 @@ public class Bingo2 {
                     System.out.print("   ");
                 }else {
                     do {
-                        temp = (j * 15) + (rand.nextInt(15) + 1);
-                    } while (temp == bingo[0][j] || temp == bingo[1][j] || temp == bingo[2][j] || temp == bingo[3][j] || temp == bingo[4][j]);
+                        temp = CreateRandomNumber(rand, j);
+                    } while (CheckForDoubles(bingo, temp, j));
                     bingo[i][j] = temp;
                     System.out.printf("%3d", bingo[i][j]);
                 }
             }
             System.out.println();
         }
+    }
+
+    private static int CreateRandomNumber(Random rand, int j) {
+        return (j * 15) + (rand.nextInt(15) + 1);
+    }
+
+    private static boolean CheckForDoubles(int[][] bingo, int temp, int j) {
+        return temp == bingo[0][j] || temp == bingo[1][j] || temp == bingo[2][j] || temp == bingo[3][j] || temp == bingo[4][j];
     }
 }
